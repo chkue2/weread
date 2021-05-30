@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+:root{
+    --max-width: 900px;
+    --max-btn-width: 500px;
+    --main-color: rgb(233, 249, 233);
+    --success-color: rgb(160, 255, 156);
+    --disable-color: #ffffff;
+    --link-btn-color: #00b95b;
+}
+/* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - https://cssdeck.com/blog/ */
+html{color:#3B3B3B;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0.25px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+div{box-sizing: border-box;}
+input{outline: none;}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=radio]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:none;
+  }
+  
+label input[type=radio]:after{
+    content:'';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    border:2px solid #d8ae70;
+    border-radius:100%;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+
+label input[type=radio]:hover:after{
+    background-color: #d8ae70;
+}
+
+label input[type=radio]:checked:after{
+    /* background: url('https://lostinyou4.github.io/leesm/study/images/radio_check.png') 0 0 no-repeat; */
+    background-image: url(/content/media/img/check.svg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: #d8ae70;
+    border:2px solid #d8ae70;
+}

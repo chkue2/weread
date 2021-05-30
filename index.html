@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>엄마표 영어</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="[엄마표영어 테스트]"/>
+        <meta property="og:description" content="20문항으로 이루어진 테스트를 통해 부모로써의 파워를 도표로 보실 수 있습니다."/>
+        <meta property="og:image" content="https://cdn.imweb.me/thumbnail/20210524/afc1be6c0ab5c.jpg"/>
+        <meta property="twitter:title" content="[엄마표영어 테스트]"/>
+        <meta property="twitter:description" content="20문항으로 이루어진 테스트를 통해 부모로써의 파워를 도표로 보실 수 있습니다."/>
+        <meta property="twitter:image" content="https://cdn.imweb.me/thumbnail/20210524/afc1be6c0ab5c.jpg"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="/content/css/reset.css" />
+        <link rel="stylesheet" href="/content/css/index.css" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-01F4DMTRH8"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-01F4DMTRH8');
+        </script>
+    </head>
+
+    <script src="/content/lib/jquery-3.5.1-slim.js"></script>
+    <script src="https://kit.fontawesome.com/6f4d922649.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="/content/js/common.js"></script>
+    <script src="/content/js/index.js"></script>
+
+    <body onload="setServeyText()">
+        <div class="container">
+            <div class="page__container on" id="page-1">
+                <div class="index__top">
+                    <div class="wrap">
+                        <div class="index__title">
+                            <p>엄마표영어,</p>
+                            <p>부모로써 나의 파워는?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="index__content">
+                    <div class="wrap">
+                        <div class="index__subtitle">
+                            <p>“나는 엄마표영어를 시작할 준비가 됐을까?”</p>
+                            <p>“나는 지금 잘하고 있는 걸까?”</p>
+                            <p>고민 많은 엄마들을 위한 테스트!</p>
+                        </div>
+                        <div class="common__btn on">
+                            <p class="index__btn btn--success" id="btn--start">START THE QUIZ NOW</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__container" id="page-2">
+                <div class="index__top">
+                    <div class="wrap">
+                        <div class="index__title">
+                        </div>
+                    </div>
+                </div>
+                <div class="index__content">
+                    <div class="wrap">
+                        <div class="common__btn mt-40">
+                            <p class="index__btn btn--success" id="btn--next">LET'S GET STARTED</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__container question__container" id="page-3">
+                <div class="servey__text">
+                    <div class="wrap">
+                        <p class="servey__question">
+                            나는
+                        </p>
+                    </div>
+                </div>
+                <div class="servey__btn">
+                    <div class="wrap">
+                        <div class="common__btn mt-80 on">
+                            <p class="index__btn flex-1 btn--success gender__btn">여성</p>
+                            <p class="index__btn flex-1 btn--success gender__btn">남성</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__container question__container" id="page-4">
+                <div class="servey__header">
+                    <div class="wrap">
+                        <i class="fas fa-arrow-left btn--back"></i>
+                    </div>
+                </div>
+                <div class="servey__text">
+                    <div class="wrap">
+                        <p class="servey__question">
+                            내 나이는
+                        </p>
+                        <input type="number" class="servey__answer" id="age"/>
+                    </div>
+                </div>
+                <div class="servey__btn">
+                    <div class="wrap">
+                        <div class="common__btn mt-80 on">
+                            <p class="index__btn w-220 btn--success age__btn">다음</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__container question__container" id="page-5">
+                <div class="servey__header">
+                    <div class="wrap">
+                        <i class="fas fa-arrow-left btn--back"></i>
+                    </div>
+                </div>
+                <div class="servey__text">
+                    <div class="wrap">
+                        <p class="servey__question">
+                            내 아이는
+                        </p>
+                    </div>
+                </div>
+                <div class="servey__btn">
+                    <div class="wrap">
+                        <div class="common__btn mt-80 on">
+                            <p class="index__btn flex-1 btn--success child-gender__btn">여성</p>
+                            <p class="index__btn flex-1 btn--success child-gender__btn">남성</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__container question__container" id="page-6">
+                <div class="servey__header">
+                    <div class="wrap">
+                        <i class="fas fa-arrow-left btn--back"></i>
+                    </div>
+                </div>
+                <div class="servey__text">
+                    <div class="wrap">
+                        <p class="servey__question">
+                            내 아이의 나이는
+                        </p>
+                        <input type="number" class="servey__answer" id="child-age"/>
+                    </div>
+                </div>
+                <div class="servey__btn">
+                    <div class="wrap">
+                        <div class="common__btn mt-80 on">
+                            <p class="index__btn w-220 btn--success child-age__btn">다음</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__container question__container" id="page-7">
+                <div class="servey__header">
+                    <div class="wrap">
+                        <i class="fas fa-arrow-left btn--back"></i>
+                    </div>
+                </div>
+                <div class="servey__text">
+                    <div class="wrap">
+                        <p class="servey__question">
+                            나는
+                        </p>
+                    </div>
+                </div>
+                <div class="servey__btn">
+                    <div class="wrap">
+                        <div class="common__btn mt-80 on">
+                            <p class="index__btn flex-1 btn--success working__btn">육아맘/육아대디</p>
+                            <p class="index__btn flex-1 btn--success working__btn">워킹맘/워킹대디</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__container question__container" id="page-8">
+                <div class="servey__header">
+                    <div class="wrap">
+                        <i class="fas fa-arrow-left btn--back"></i>
+                    </div>
+                </div>
+                <div class="servey__text">
+                    <div class="wrap">
+                        <p class="servey__question">
+                            나는
+                        </p>
+                    </div>
+                </div>
+                <div class="servey__btn">
+                    <div class="wrap">
+                        <div class="common__btn mt-80 on">
+                            <p class="index__btn flex-1 btn--success english__btn">엄마표영어가 처음이예요</p>
+                            <p class="index__btn flex-1 btn--success english__btn">엄마표영어를 하고있어요</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 설문 문항 추가 -->
+            <div id="servey__container"></div>
+
+            <div class="page__container question__container" id="page-29">
+                <div class="servey__text">
+                    <div class="wrap">
+                        <p class="servey__question">수고하셨습니다</p>
+                        <p class="servey__question">٩(ˊᗜˋ*)و</p>
+                    </div>
+                </div>
+                <div class="servey__btn">
+                    <div class="wrap">
+                        <div class="common__btn mt-80 on">
+                            <p class="index__btn w-220 btn--success result__btn">MY RESULT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="footer__container">
+                <div class="wrap">
+                    <div class="footer__link__container">
+                        <div class="footer__btn--link" id="kakao--copy">
+                            <p class="icon"><i class="fas fa-comment"></i></p>
+                            <span>카카오톡</span>
+                        </div>
+                        <div class="footer__btn--link" id="twitter--copy">
+                            <p class="icon"><i class="fas fa-dove"></i></p>
+                            <span>트위터</span>
+                        </div>
+                        <div class="footer__btn--link" id="link--copy">
+                            <p class="icon"><i class="fas fa-link"></i></p>
+                            <span>링크복사</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog" id="loading">
+            <p class="loading__text">
+                데이터 전송중입니다.<br>
+                잠시만 기다려주세요!
+            </p>
+        </div>
+    </body>
+</html>

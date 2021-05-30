@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>엄마표 영어</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="[엄마표영어 테스트]"/>
+        <meta property="og:description" content="20문항으로 이루어진 테스트를 통해 부모로써의 파워를 도표로 보실 수 있습니다."/>
+        <meta property="og:image" content="https://cdn.imweb.me/thumbnail/20210524/afc1be6c0ab5c.jpg"/>
+        <meta property="twitter:title" content="[엄마표영어 테스트]"/>
+        <meta property="twitter:description" content="20문항으로 이루어진 테스트를 통해 부모로써의 파워를 도표로 보실 수 있습니다."/>
+        <meta property="twitter:image" content="https://cdn.imweb.me/thumbnail/20210524/afc1be6c0ab5c.jpg"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="/content/css/reset.css" />
+        <link rel="stylesheet" href="/content/css/index.css" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-01F4DMTRH8"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-01F4DMTRH8');
+        </script>
+    </head>
+
+    <script src="/content/lib/jquery-3.5.1-slim.js"></script>
+    <script src="https://kit.fontawesome.com/6f4d922649.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="/content/js/common.js"></script>
+    <script src="/content/js/result.js"></script>
+
+    <body>
+        <div class="container">
+            <div class="page__container on" id="page-1">
+                <div class="index__top">
+                    <div class="wrap">
+                        <div class="index__title result__title">
+                            <p>"당신의 엄마표영어 파워는 <span id="percent"></span> 입니다"</p>
+                        </div>
+                        <div class="index__chart result__bg" id="chart_box">
+                            <canvas id="chart" width="400" height="400"></canvas>
+                        </div>
+                        <div class="result__text result__bg">
+                            <p class="text__title">
+                                파워를 충전하는 방법은?
+                            </p>
+                            <div class="text__result" id="result">
+                            </div>
+                            <div class="text__detail" id="detail">
+                            </div>
+                        </div>
+                        <p class="result__middle">
+                            한번 더 파워업 !
+                        </p>
+                        <div class="result__text result__bg">
+                            <p class="text__title">
+                                당신을 위한 Dr!Sue. 추천 컨텐츠
+                            </p>
+                            <div class="common__btn link__btn on">
+                                <p class="index__btn btn--success" id="btn--link">리터러시 전문가 과정</p>
+                            </div>
+                            <div class="text__detail">
+                                <p>당신의 파워에 전문성을 더한다면</p>
+                                <p>미래에 멋진 엄마표영어 전문가가 될지도 몰라요~!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <div class="footer__container result__footer">
+                        <div class="wrap">
+                            <div class="footer__link__container">
+                                <div class="footer__btn--link" id="kakao--copy">
+                                    <p class="icon"><i class="fas fa-comment"></i></p>
+                                    <span>카카오톡</span>
+                                </div>
+                                <div class="footer__btn--link" id="twitter--copy">
+                                    <p class="icon"><i class="fas fa-dove"></i></p>
+                                    <span>트위터</span>
+                                </div>
+                                <div class="footer__btn--link" id="link--copy">
+                                    <p class="icon"><i class="fas fa-link"></i></p>
+                                    <span>링크복사</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

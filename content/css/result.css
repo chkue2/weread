@@ -1,0 +1,108 @@
+body{
+    background-color: #fcf3d6;
+}
+
+.res_inner{
+    padding: 0px 20px;
+    padding-top: 100px;
+    text-align: center;
+}
+.res_title{
+    font-size: 24px;
+    font-weight: 700;
+}
+#title_type{
+    font-size: 24px;
+    font-weight: 700;
+    color: #d8ae70;
+}
+.chart{
+    width: 450px !important;
+    height: 450px !important;
+    margin: 0 auto;
+}
+
+.res_content{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #ffffff;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    max-width: 650px;
+}
+.c_title{
+    font-weight: 700;
+    font-size: 16px;
+}
+.c_subj{
+    margin-top: 15px;
+    text-align: left;
+}
+.c_tag{
+    text-align: left;
+    margin-top: 10px;
+    font-style: italic;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.c_tag span{
+    background-color: rgba(255, 227, 137, 0.5);
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.type_img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.book_inner{
+    text-align: center;
+    margin-top: 150px;
+}
+.book_content{
+    font-size: 18px;
+}
+.book_title{
+    margin-top: 50px;
+    font-size: 20px;
+}
+.book_title span{
+    font-size: 20px;
+    font-weight: 700;
+}
+.book_img{
+    width: 350px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.link_title{
+    margin-top: 150px;
+    font-size: 16px;
+}
+.link_box{
+    margin-top: 20px !important;
+}
+
+.rebtn{
+    width: 300px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    cursor: pointer;
+    background-color: rgba(255, 227, 137, 0.5);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 780px){
+    .chart{
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
