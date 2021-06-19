@@ -232,11 +232,11 @@ function setServeyText(){
                 <div class="servey__btn servey__score__btn">
                     <div class="wrap">
                         <div class="score__btn mt-80 on">
-                            <p class="servey__score btn--success" id="1">매우<br>그렇지않다</p>
-                            <p class="servey__score btn--success" id="2">그렇지<br>않다</p>
-                            <p class="servey__score btn--success" id="3">보통<br>이다</p>
-                            <p class="servey__score btn--success" id="4">그렇다</p>
-                            <p class="servey__score btn--success" id="5">매우<br>그렇다</p>
+                            <p class="servey__score btn--success" id="1"><span>매우</span><span>그렇지않다</p>
+                            <p class="servey__score btn--success" id="2"><span>그렇지</span><span>않다</span></p>
+                            <p class="servey__score btn--success" id="3"><span>보통</span><span>이다</span></p>
+                            <p class="servey__score btn--success" id="4"><span>그렇다</span></p>
+                            <p class="servey__score btn--success" id="5"><span>매우</span><span>그렇다</span></p>
                         </div>
                     </div>
                 </div>

@@ -30,6 +30,8 @@
 .header .header__menu{
     flex: 1;
     text-align: right;
+    opacity: 0;
+    visibility: hidden;
 }
 .header .header__menu .menu__item{
     font-size: 15px;
@@ -152,6 +154,7 @@
 
 .servey__score {
     display: inline-flex;
+    flex-direction: column;
     width: 80px;
     height: 80px;
     font-size: 13px;
