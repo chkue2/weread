@@ -26,7 +26,6 @@ $(document).on('click', '#twitter--copy', function(){
 
 function sendLink() {
     var url = window.document.location.href;
-    console.log('kakao');
 
     Kakao.Link.createDefaultButton({
         container: '#kakao--copy',

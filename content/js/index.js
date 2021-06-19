@@ -1,7 +1,6 @@
 const startTexts = [
-    ['안녕하세요!', '엄마표영어 자가진단 테스트에 참여해 주셔서 감사드립니다.', '(⌒▽⌒)'],
+    ['안녕하세요!', '엄마표영어 자가진단 테스트에 참여해 주셔서 감사드립니다.'],
     ['엄마표영어 자가진단 테스트의 결과를 통해', '본인의 엄마표영어 역량과 실행전 부족한 점을 보완할 수 있는 기회를 제공할 예정입니다.'],
-    ['개선을 위해 제공되는 정보는', '엄마표영어 멘토링 교육, 영어 홈스쿨링 프로그램 개발의', '고도화를 위한 기초자료로 활용될 거예요.', 'φ(*⌒▽⌒)ノ'],
 ];
 const serveyCategory = [
     'environment', 'understanding', 'executive', 'skil', 'efficacy'
@@ -73,15 +72,15 @@ let result = {
     efficacy: 0,
 }
 
+$(document).ready(function(){
+    nextPage();
+    startTyping();
+});
+
 $(document).on('click', '.btn--back', function(){
     prevPage();
 });
 
-
-$(document).on('click', '#btn--start', function(){
-    nextPage();
-    startTyping();
-});
 
 $(document).on('click', '#btn--next', function(){
     nextPage();
@@ -154,15 +153,17 @@ $(document).on('click', '.english__btn', function(){
 });
 
 $(document).on('click', '.servey__score', function(){
-    const score = $(this).attr('id');
-    serveyScore[serveyIndex] = score;
-    serveyIndex++;
-
     $(this).prevAll().removeClass('on');
     $(this).nextAll().removeClass('on');
     $(this).addClass('on');
+});
 
-    console.log(serveyScore);
+$(document).on('click', '.score--success', function(){
+    const score = $(this).parents('.servey__container').find('.servey__score.on').attr('id');
+    if(score === undefined || score === 'undefined') return false;
+
+    serveyScore[serveyIndex] = score;
+    serveyIndex++;
 
     nextPage();
 });
@@ -206,6 +207,12 @@ $(document).on('click', '.result__btn', function(){
 });
 
 function setServeyText(){
+    // servey back btn
+    // <div class="servey__header">
+    //     <div class="wrap">
+    //         <i class="fas fa-arrow-left btn--back"></i>
+    //     </div>
+    // </div>
     let html = '';
     let texts = [];
     let target = '';
@@ -216,19 +223,13 @@ function setServeyText(){
             pageCount++;        
             html = `
             <div class="page__container question__container servey__container" id="page-${pageCount}">
-                <div class="servey__header">
-                    <div class="wrap">
-                        <i class="fas fa-arrow-left btn--back"></i>
-                        <p class="servey__count">${serveyIndex}/${maxServeyCount}</p>
-                    </div>
-                </div>
                 <div class="servey__text">
                     <div class="wrap">
                         <p class="servey__question" id="${serveyCategory[i]}_${j}">
                         </p>
                     </div>
                 </div>
-                <div class="servey__btn">
+                <div class="servey__btn servey__score__btn">
                     <div class="wrap">
                         <div class="score__btn mt-80 on">
                             <p class="servey__score btn--success" id="1">매우<br>그렇지않다</p>
@@ -239,6 +240,14 @@ function setServeyText(){
                         </div>
                     </div>
                 </div>
+                <div class="servey__btn">
+                    <div class="wrap">
+                        <div class="common__btn mt-80 on">
+                            <p class="index__btn w-220 score--success">NEXT</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="servey__count">${serveyIndex}/${maxServeyCount}</p>
             </div>
             `;
             $('#servey__container').append(html);
@@ -258,6 +267,14 @@ function nextPage(){
     page++;
     $('.page__container').removeClass('on');
     $(`#page-${page}`).addClass('on');
+
+    if(page > 3 && page < 29){
+        $('.btn--back').addClass('on');
+        $('.header__logo').addClass('off');
+    } else {
+        $('.btn--back').removeClass('on');
+        $('.header__logo').removeClass('off');
+    }
 }
 
 function prevPage(){
@@ -265,6 +282,14 @@ function prevPage(){
     $('.page__container').removeClass('on');
     $(`#page-${page}`).addClass('on');
     if(serveyIndex > 1) serveyIndex--;
+
+    if(page > 3 && page < 29){
+        $('.btn--back').addClass('on');
+        $('.header__logo').addClass('off');
+    } else {
+        $('.btn--back').removeClass('on');
+        $('.header__logo').removeClass('off');
+    }
 }
 
 function startTyping(){

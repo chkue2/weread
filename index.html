@@ -4,10 +4,10 @@
         <title>엄마표 영어</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="[엄마표영어 테스트]"/>
+        <meta property="og:title" content="[엄마표영어 파워 테스트]"/>
         <meta property="og:description" content="20문항으로 이루어진 테스트를 통해 부모로써의 파워를 도표로 보실 수 있습니다."/>
         <meta property="og:image" content="https://cdn.imweb.me/thumbnail/20210524/afc1be6c0ab5c.jpg"/>
-        <meta property="twitter:title" content="[엄마표영어 테스트]"/>
+        <meta property="twitter:title" content="[엄마표영어 파워 테스트]"/>
         <meta property="twitter:description" content="20문항으로 이루어진 테스트를 통해 부모로써의 파워를 도표로 보실 수 있습니다."/>
         <meta property="twitter:image" content="https://cdn.imweb.me/thumbnail/20210524/afc1be6c0ab5c.jpg"/>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -32,30 +32,19 @@
     <script src="/content/js/index.js"></script>
 
     <body onload="setServeyText()">
+      <div class="header">
+        <i class="fas fa-arrow-left header__btn btn--back on"></i>
+        <img class="header__logo" src="/content/media/img/logo.jpeg" />
+        <div class="header__menu">
+            <a class="menu__item">Login</a>
+            <a class="menu__item">Register</a>
+            <a class="menu__item">Cart</a>
+            <a class="menu__item">MyPage</a>
+            <a class="menu__item">Search</a>
+        </div>
+      </div>
         <div class="container">
-            <div class="page__container on" id="page-1">
-                <div class="index__top">
-                    <div class="wrap">
-                        <div class="index__title">
-                            <p>엄마표영어,</p>
-                            <p>부모로써 나의 파워는?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="index__content">
-                    <div class="wrap">
-                        <div class="index__subtitle">
-                            <p>“나는 엄마표영어를 시작할 준비가 됐을까?”</p>
-                            <p>“나는 지금 잘하고 있는 걸까?”</p>
-                            <p>고민 많은 엄마들을 위한 테스트!</p>
-                        </div>
-                        <div class="common__btn on">
-                            <p class="index__btn btn--success" id="btn--start">START THE QUIZ NOW</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="page__container" id="page-2">
+            <div class="page__container on" id="page-2">
                 <div class="index__top">
                     <div class="wrap">
                         <div class="index__title">
@@ -65,7 +54,7 @@
                 <div class="index__content">
                     <div class="wrap">
                         <div class="common__btn mt-40">
-                            <p class="index__btn btn--success" id="btn--next">LET'S GET STARTED</p>
+                            <p class="index__btn right__btn" id="btn--next">NEXT</p>
                         </div>
                     </div>
                 </div>
@@ -88,11 +77,6 @@
                 </div>
             </div>
             <div class="page__container question__container" id="page-4">
-                <div class="servey__header">
-                    <div class="wrap">
-                        <i class="fas fa-arrow-left btn--back"></i>
-                    </div>
-                </div>
                 <div class="servey__text">
                     <div class="wrap">
                         <p class="servey__question">
@@ -104,17 +88,12 @@
                 <div class="servey__btn">
                     <div class="wrap">
                         <div class="common__btn mt-80 on">
-                            <p class="index__btn w-220 btn--success age__btn">다음</p>
+                            <p class="index__btn w-220 right__btn age__btn">NEXT</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="page__container question__container" id="page-5">
-                <div class="servey__header">
-                    <div class="wrap">
-                        <i class="fas fa-arrow-left btn--back"></i>
-                    </div>
-                </div>
                 <div class="servey__text">
                     <div class="wrap">
                         <p class="servey__question">
@@ -132,11 +111,6 @@
                 </div>
             </div>
             <div class="page__container question__container" id="page-6">
-                <div class="servey__header">
-                    <div class="wrap">
-                        <i class="fas fa-arrow-left btn--back"></i>
-                    </div>
-                </div>
                 <div class="servey__text">
                     <div class="wrap">
                         <p class="servey__question">
@@ -148,17 +122,12 @@
                 <div class="servey__btn">
                     <div class="wrap">
                         <div class="common__btn mt-80 on">
-                            <p class="index__btn w-220 btn--success child-age__btn">다음</p>
+                            <p class="index__btn w-220 btn--success child-age__btn">NEXT</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="page__container question__container" id="page-7">
-                <div class="servey__header">
-                    <div class="wrap">
-                        <i class="fas fa-arrow-left btn--back"></i>
-                    </div>
-                </div>
                 <div class="servey__text">
                     <div class="wrap">
                         <p class="servey__question">
@@ -176,11 +145,6 @@
                 </div>
             </div>
             <div class="page__container question__container" id="page-8">
-                <div class="servey__header">
-                    <div class="wrap">
-                        <i class="fas fa-arrow-left btn--back"></i>
-                    </div>
-                </div>
                 <div class="servey__text">
                     <div class="wrap">
                         <p class="servey__question">
@@ -217,7 +181,7 @@
             </div>
 
             <!-- footer -->
-            <div class="footer__container">
+            <!-- <div class="footer__container">
                 <div class="wrap">
                     <div class="footer__link__container">
                         <div class="footer__btn--link" id="kakao--copy">
@@ -234,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="dialog" id="loading">
             <p class="loading__text">

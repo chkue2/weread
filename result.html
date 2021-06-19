@@ -4,15 +4,16 @@
         <title>엄마표 영어</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="[엄마표영어 테스트]"/>
+        <meta property="og:title" content="[엄마표영어 파워 테스트]"/>
         <meta property="og:description" content="20문항으로 이루어진 테스트를 통해 부모로써의 파워를 도표로 보실 수 있습니다."/>
         <meta property="og:image" content="https://cdn.imweb.me/thumbnail/20210524/afc1be6c0ab5c.jpg"/>
-        <meta property="twitter:title" content="[엄마표영어 테스트]"/>
+        <meta property="twitter:title" content="[엄마표영어 파워 테스트]"/>
         <meta property="twitter:description" content="20문항으로 이루어진 테스트를 통해 부모로써의 파워를 도표로 보실 수 있습니다."/>
         <meta property="twitter:image" content="https://cdn.imweb.me/thumbnail/20210524/afc1be6c0ab5c.jpg"/>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/content/css/reset.css" />
         <link rel="stylesheet" href="/content/css/index.css" />
+        <link rel="stylesheet" href="/content/css/result.css" />
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-01F4DMTRH8"></script>
         <script>
@@ -32,38 +33,66 @@
     <script src="/content/js/result.js"></script>
 
     <body>
+        <div class="header">
+            <i class="fas fa-arrow-left header__btn btn--back"></i>
+            <img class="header__logo" src="/content/media/img/logo.jpeg" />
+            <div class="header__menu">
+                <a class="menu__item">Login</a>
+                <a class="menu__item">Register</a>
+                <a class="menu__item">Cart</a>
+                <a class="menu__item">MyPage</a>
+                <a class="menu__item">Search</a>
+            </div>
+        </div>
         <div class="container">
             <div class="page__container on" id="page-1">
-                <div class="index__top">
+                <div class="result__top">
                     <div class="wrap">
                         <div class="index__title result__title">
-                            <p>"당신의 엄마표영어 파워는 <span id="percent"></span> 입니다"</p>
+                            <p>나의 엄마표영어 파워는 "<span id="percent"></span>"</p>
+                        </div>
+                        <p class="result__img">
+                            <img src="#" alt="not found image"/>
+                        </p>
+                        <div class="result__text result__bg">
+                            <div class="chess__title"></div>
+                            <div class="chess__subtitle"></div>
+                            <div class="chess__detail"></div>
                         </div>
                         <div class="index__chart result__bg" id="chart_box">
                             <canvas id="chart" width="400" height="400"></canvas>
                         </div>
                         <div class="result__text result__bg">
-                            <p class="text__title">
-                                파워를 충전하는 방법은?
-                            </p>
                             <div class="text__result" id="result">
                             </div>
                             <div class="text__detail" id="detail">
                             </div>
                         </div>
-                        <p class="result__middle">
-                            한번 더 파워업 !
-                        </p>
-                        <div class="result__text result__bg">
+                        <div class="result__bg">
                             <p class="text__title">
-                                당신을 위한 Dr!Sue. 추천 컨텐츠
+                                Dr!Sue. 추천 컨텐츠
                             </p>
-                            <div class="common__btn link__btn on">
-                                <p class="index__btn btn--success" id="btn--link">리터러시 전문가 과정</p>
-                            </div>
-                            <div class="text__detail">
-                                <p>당신의 파워에 전문성을 더한다면</p>
-                                <p>미래에 멋진 엄마표영어 전문가가 될지도 몰라요~!</p>
+                            <div class="result__bottom">
+                                <a class="common__btn link__btn result__bottom__btn" href="https://weread.imweb.me/httpswereadimwebme57" target="_blank">
+                                    <span class="btn__top">Dr!Sue. X FRIEDNS</span>
+                                    <span class="btn__bottom">원데이 리터러시 스타트</span>
+                                </a>
+                                <a class="common__btn link__btn result__bottom__btn" href="https://cafe.naver.com/makegunz" target="_blank">
+                                    <span class="btn__top">Dr!Sue. X TWO PONDS</span>
+                                    <span class="btn__bottom">영어책읽기 습관만들기</span>
+                                </a>
+                                <a class="common__btn link__btn result__bottom__btn" href="https://www.youtube.com/channel/UC78PdE3Ka1miOnkLW2CzVLw" target="_blank">
+                                    <span class="btn__top">Dr!Sue. X DA-IN</span>
+                                    <span class="btn__bottom">리드 투 미 맘</span>
+                                </a>
+                                <a class="common__btn link__btn result__bottom__btn" href="https://www.didimdol.co.kr/books/textbook_intro.asp?spart=6" target="_blank">
+                                    <span class="btn__top">Dr!Sue. X DIDIMDOL</span>
+                                    <span class="btn__bottom">21일만 따라하면 된다!</span>
+                                </a>
+                                <a class="common__btn link__btn result__bottom__btn" href="https://school.gilbut.co.kr/book/view?bookcode=BN001322" target="_blank">
+                                    <span class="btn__top">Dr!Sue. X GILBUT</span>
+                                    <span class="btn__bottom">미국 교과서 리딩</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -71,17 +100,14 @@
                     <div class="footer__container result__footer">
                         <div class="wrap">
                             <div class="footer__link__container">
-                                <div class="footer__btn--link" id="kakao--copy">
-                                    <p class="icon"><i class="fas fa-comment"></i></p>
-                                    <span>카카오톡</span>
-                                </div>
                                 <div class="footer__btn--link" id="twitter--copy">
                                     <p class="icon"><i class="fas fa-dove"></i></p>
-                                    <span>트위터</span>
+                                </div>
+                                <div class="footer__btn--link" id="kakao--copy">
+                                    <p class="icon"><i class="fas fa-comment"></i></p>
                                 </div>
                                 <div class="footer__btn--link" id="link--copy">
                                     <p class="icon"><i class="fas fa-link"></i></p>
-                                    <span>링크복사</span>
                                 </div>
                             </div>
                         </div>
