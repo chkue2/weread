@@ -2,16 +2,25 @@
     padding: 60px 0px;
 }
 
+.result__bg.result__chess__top{
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.index__title.result__title{
+    margin: 40px 0px;
+}
+
 .chess__title,
 .chess__title span{
-    font-size: 20px;
+    font-size: 28px;
     text-align: center;
     font-weight: 600;
 }
 
 .chess__subtitle,
 .chess__subtitle span{
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     padding-top: 5px;
 }
@@ -19,11 +28,16 @@
 .chess__detail,
 .chess__detail span{
     padding-top: 30px;
+    word-break: break-all;
 }
 
 .result__text span{
     font-weight: 600;
-    color: rgb(188, 31, 34);
+    color: var(--text-color-red);
+}
+
+.text__result#result p span{
+    font-size: 18px;
 }
 
 .result__title p,
@@ -31,12 +45,14 @@
     font-size: 21px;
     font-weight: 600;
 }
+.result__title #percent{
+    color: var(--text-color-red);
+}
 
 .result__img{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
 }
 
 .result__img img{
@@ -50,19 +66,20 @@
     border-radius: 24px;
     width: 700px;
     margin: 0 auto;
-    margin-top: 50px;
 }
 .result__text{
     padding: 60px;
 }
 .result__bg .text__title{font-size: 20px; font-weight: 600; text-align: center;}
 .result__text .text__result{margin: 20px 0px;}
-.result__text .text__result p{color: rgb(188, 31, 34); text-align: center; font-size: 20px; font-weight: 600;}
+.result__text .text__result p{text-align: center; font-size: 18px; font-weight: 600;}
 .result__text .text__detail{text-align: left;}
-.result__text .text__detail span{color: rgb(188, 31, 34);}
+.result__text .text__detail p{text-align: justify; word-break: break-all;}
+.result__text .text__detail span{color: var(--text-color-red);}
 
 .result__middle{text-align: center; margin: 40px 0px; font-size:22px;}
 
+.result__recommend__container{margin-top: 50px;}
 
 .footer__container{width: 100%; position: fixed; bottom: 0;}
 .footer__link__container{display: flex; justify-content: center; padding-bottom: 25px;}
@@ -84,5 +101,9 @@
     .result__bg{
         width: auto;
         padding: 20px;
+    }
+    .result__bg.result__chess__top{
+        padding-bottom: 0;
+        padding-top: 0;
     }
 }

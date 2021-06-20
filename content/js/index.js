@@ -1,7 +1,7 @@
-const startTexts = [
-    ['안녕하세요!', '엄마표영어 자가진단 테스트에 참여해 주셔서 감사드립니다.'],
-    ['엄마표영어 자가진단 테스트의 결과를 통해', '본인의 엄마표영어 역량과 실행전 부족한 점을 보완할 수 있는 기회를 제공할 예정입니다.'],
-];
+// const startTexts = [
+//     ['안녕하세요!', '엄마표영어 자가진단 테스트에 참여해 주셔서 감사드립니다.'],
+//     ['엄마표영어 자가진단 테스트의 결과를 통해', '본인의 엄마표영어 역량과 실행전 부족한 점을 보완할 수 있는 기회를 제공할 예정입니다.'],
+// ];
 const serveyCategory = [
     'environment', 'understanding', 'executive', 'skil', 'efficacy'
 ]
@@ -32,13 +32,13 @@ const serveyQuestion = {
         '나는 아이에게 알맞은 교재나 영어책을 고를 수 있다.',
         '우리 아이의 영어책은 내가 읽고 충분히 이해할 수 있다.',
         '아이에게 영어책을 읽어줄 때, 나는 간단한 영어로 질문을 할 수 있다.',
-        '나는 기본적인 영어단어를 소리내어 잘 읽을 수 있다.',
+        '나는 기본적인 영어 단어를 소리내어 잘 읽을 수 있다.',
     ],
     efficacy:[
         //자기효능감
         '나는 매체를 통해 배우는 엄마표영어 교육 내용을 잘 이해한다.',
         '나는 엄마표영어에서 사용하는 자료를 충분히 활용할 수 있다.',
-        '노력을 통해 내가 세운 엄마표영어의 목표를 달성할 수 있을 것이라고 생각한다.',
+        '나는 노력을 통해 내가 세운 엄마표영어의 목표를 달성할 수 있을 것이라고 생각한다.',
         '나는 엄마표영어로 우리 아이의 영어 성장을 도울 수 있을 것이라고 생각한다.',
     ],
 }
@@ -54,7 +54,7 @@ var typingBool = false;
 var typingIdx=0; 
 var ulIndex = 0;
 var liIndex = 0;
-var liLength = startTexts[ulIndex].length;
+//var liLength = startTexts[ulIndex].length;
 
 
 //설문 데이터
@@ -72,10 +72,10 @@ let result = {
     efficacy: 0,
 }
 
-$(document).ready(function(){
-    nextPage();
-    startTyping();
-});
+// $(document).ready(function(){
+//     nextPage();
+//     startTyping();
+// });
 
 $(document).on('click', '.btn--back', function(){
     prevPage();
@@ -292,62 +292,62 @@ function prevPage(){
     }
 }
 
-function startTyping(){
-    // 타이핑될 텍스트를 가져온다 
-    var typingTxt = startTexts[ulIndex][liIndex];
-    //liIndex 인덱스로 구분해 한줄씩 가져옴
+// function startTyping(){
+//     // 타이핑될 텍스트를 가져온다 
+//     var typingTxt = startTexts[ulIndex][liIndex];
+//     //liIndex 인덱스로 구분해 한줄씩 가져옴
 
-    typingTxt=typingTxt.split(""); // 한글자씩 잘라 배열로만든다
+//     typingTxt=typingTxt.split(""); // 한글자씩 잘라 배열로만든다
 
-    if(typingBool==false){ // 타이핑이 진행되지 않았다면 
-        $(`#page-${page} .index__title`).append(`<p id="text-${ulIndex}${liIndex}"></p>`);
-        typingBool=true; 
-        var tyInt = setInterval(typing, speed); // 반복동작 
-    } 
+//     if(typingBool==false){ // 타이핑이 진행되지 않았다면 
+//         $(`#page-${page} .index__title`).append(`<p id="text-${ulIndex}${liIndex}"></p>`);
+//         typingBool=true; 
+//         var tyInt = setInterval(typing, speed); // 반복동작 
+//     } 
         
-    function typing(){ 
-        if(typingIdx<typingTxt.length){ // 타이핑될 텍스트 길이만큼 반복 
-            $(`#text-${ulIndex}${liIndex}`).append(typingTxt[typingIdx]); // 한글자씩 이어준다. 
-            typingIdx++; 
-        } else{ //한문장이끝나면
-            if(liIndex<liLength-1){
-                //다음문장으로  가기위해 인덱스를 1증가
-                liIndex++; 
-                //다음문장을 타이핑하기위한 셋팅
-                typingIdx=0;
-                typingBool = false; 
-                typingTxt = startTexts[ulIndex][liIndex];
+//     function typing(){ 
+//         if(typingIdx<typingTxt.length){ // 타이핑될 텍스트 길이만큼 반복 
+//             $(`#text-${ulIndex}${liIndex}`).append(typingTxt[typingIdx]); // 한글자씩 이어준다. 
+//             typingIdx++; 
+//         } else{ //한문장이끝나면
+//             if(liIndex<liLength-1){
+//                 //다음문장으로  가기위해 인덱스를 1증가
+//                 liIndex++; 
+//                 //다음문장을 타이핑하기위한 셋팅
+//                 typingIdx=0;
+//                 typingBool = false; 
+//                 typingTxt = startTexts[ulIndex][liIndex];
 
-                $(`#page-${page} .index__title`).append(`<p id="text-${ulIndex}${liIndex}"></p>`);
+//                 $(`#page-${page} .index__title`).append(`<p id="text-${ulIndex}${liIndex}"></p>`);
         
-                //다음문장 타이핑전 1초 쉰다
-                clearInterval(tyInt);
-                //타이핑종료
+//                 //다음문장 타이핑전 1초 쉰다
+//                 clearInterval(tyInt);
+//                 //타이핑종료
         
-                setTimeout(function(){
-                    tyInt = setInterval(typing, speed);
-                }, stay);
-            } else if(liIndex==liLength-1){
-                //마지막 문장까지 써지면 반복종료
-                clearInterval(tyInt);
+//                 setTimeout(function(){
+//                     tyInt = setInterval(typing, speed);
+//                 }, stay);
+//             } else if(liIndex==liLength-1){
+//                 //마지막 문장까지 써지면 반복종료
+//                 clearInterval(tyInt);
 
-                if(ulIndex < startTexts.length-1){
-                    //사용했던 변수 초기화
-                    typingBool = false; 
-                    liIndex=-1;
-                    typingIdx=0;
-                    ulIndex++;
-                    liLength = startTexts[ulIndex].length;
-                    $(`#page-${page} .index__title`).empty();
+//                 if(ulIndex < startTexts.length-1){
+//                     //사용했던 변수 초기화
+//                     typingBool = false; 
+//                     liIndex=-1;
+//                     typingIdx=0;
+//                     ulIndex++;
+//                     liLength = startTexts[ulIndex].length;
+//                     $(`#page-${page} .index__title`).empty();
     
-                    setTimeout(function(){
-                        tyInt = setInterval(typing, speed);
-                    }, stay);
-                }else {
-                    $(`#page-${page} .common__btn`).addClass('on');
-                    clearInterval(tyInt);
-                }
-            }
-        } 
-    }  
-}
+//                     setTimeout(function(){
+//                         tyInt = setInterval(typing, speed);
+//                     }, stay);
+//                 }else {
+//                     $(`#page-${page} .common__btn`).addClass('on');
+//                     clearInterval(tyInt);
+//                 }
+//             }
+//         } 
+//     }  
+// }
