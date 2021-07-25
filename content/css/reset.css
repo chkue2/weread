@@ -67,3 +67,19 @@ label input[type=radio]:checked:after{
     background-color: #d8ae70;
     border:2px solid #d8ae70;
 }
+
+.mobile{display: none;}
+
+
+.container{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#doz_footer *{
+    color: #ffffff;
+}
+
+@media all and (max-width: 479px){
+    .mobile{display: block;}
+}

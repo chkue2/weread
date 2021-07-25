@@ -60,7 +60,7 @@
 
 .btn--back{font-size: 20px; padding-bottom: 30px; cursor: pointer;}
 
-.page__container{display: none; margin-top: 120px;}
+.page__container{display: none; margin-top: 120px; max-width: 970px;}
 .page__container.on{display: block;}
 
 #page-0 .wrap.flex{width: 900px;}
@@ -126,7 +126,7 @@
 .link__btn{margin: 30px 0px;}
 
 .servey__question{
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     padding-top: 60px;
 }
@@ -207,9 +207,6 @@
     .header .btn--back.on{display: block; padding-left: 24px;}
     .header .header__logo.off{display: none;}
     .header .header__menu{display: none;}
-    .question__container{
-        padding: 0px 24px;
-    }
 
     .index__title p,
     .index__title span{
