@@ -80,6 +80,7 @@
 .result__middle{text-align: center; margin: 40px 0px; font-size:22px;}
 
 .result__recommend__container{margin-top: 50px;}
+.result__recommend{margin-top: 15px;}
 
 .footer__container{width: 100%; position: fixed; bottom: 0;}
 .footer__link__container{display: flex; justify-content: center; padding-bottom: 25px;}

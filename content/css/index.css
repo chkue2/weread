@@ -77,13 +77,13 @@
 
 .index__top{
     padding: 60px 0px;
-    background-color: var(--success-color);
+    /* background-color: var(--success-color); */
 }
 
 .index__title{text-align: center;}
 .index__title p,
 .index__title span{
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 2;
 }
@@ -207,13 +207,6 @@
     .header .btn--back.on{display: block; padding-left: 24px;}
     .header .header__logo.off{display: none;}
     .header .header__menu{display: none;}
-
-    .index__title p,
-    .index__title span{
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 2;
-    }
 
     .common__btn p + p{
         margin-left: 12px;
